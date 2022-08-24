@@ -189,7 +189,7 @@ const Card = (stack, targetElement, prepend) => {
           dragging = false;
         });
 
-        global.addEventListener('touchmove', (event) => {
+        targetElement.addEventListener('touchmove', (event) => {
           if (dragging && config.allowMovement(event, isTouchDevice())) {
             event.preventDefault();
           }
